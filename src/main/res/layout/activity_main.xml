@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <TableRow>
+            <RadioGroup
+                android:id="@+id/radioCiphers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scytale"
+                    android:textSize="25dp"
+                    android:padding="6dp"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/radio_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caesar"
+                    android:textSize="25dp"
+                    android:padding="6dp" />
+
+                <RadioButton
+                    android:id="@+id/radio_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vigenere"
+                    android:textSize="25dp"
+                    android:padding="6dp"/>
+
+            </RadioGroup>
+
+            <TableLayout
+                android:paddingLeft="20dp">
+
+                <TableRow>
+                    <EditText
+                        android:id="@+id/rows"
+                        android:inputType="number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Rows"/>
+                </TableRow>
+                <TableRow>
+                    <EditText
+                        android:id="@+id/shift"
+                        android:digits="1234567890-"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Shift"/>
+                </TableRow>
+                <TableRow>
+                    <EditText
+                        android:id="@+id/keyword"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Keyword" />
+                </TableRow>
+
+            </TableLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+
+
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <TableRow>
+            <Button
+                android:id="@+id/btnDisplay"
+                android:text="Apply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </TableRow>
+    </TableLayout>
+
+
+
+    <TextView
+        android:id="@+id/selectedCipher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="No cipher Selected"
+        android:textSize="24dp"/>
+
+    <EditText
+        android:id="@+id/ciphertext"
+        android:paddingTop="50dp"
+        android:hint="Ciphertext (Encoded Message)"
+        android:layout_width="wrap_content"
+        android:maxWidth="400dp"
+        android:layout_height="wrap_content"
+        android:inputType="textCapSentences"
+        android:layout_gravity="center_horizontal" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/encryptBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Encrypt"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/decryptBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Decrypt"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </TableRow>
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/plaintext"
+        android:hint="Plaintext (Decoded Message)"
+        android:layout_width="wrap_content"
+        android:maxWidth="400dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
+
+
+</LinearLayout>
